@@ -2,7 +2,7 @@ main {
   height: 100vh;
 }
 
-section {
+.section-main {
   padding: 120px 147px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -86,38 +86,123 @@ section {
   }
 }
 
+.section-secondary {
+  padding: 20px 147px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .section-title {
+    font-size: 30px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: 1.5px;
+    padding: 30px 0;
+    border-bottom: 1px solid #fff;
+    text-transform: uppercase;
+  }
+
+  .cards {
+    width: 100%;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    .card {
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+      }
+      div {
+        padding: 0 15%;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+
+        h2 {
+          font-size: 21px;
+          font-weight: bold;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.43;
+          letter-spacing: normal;
+        }
+
+        span {
+          text-align: center;
+          font-size: 21px;
+          font-weight: 300;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.43;
+          letter-spacing: normal;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 480px) {
-  section {
+  .section-main {
     grid-template-columns: 1fr;
     padding: 10px;
+  }
+
+  .section-secondary {
+    padding: 10px;
+    .cards {
+      grid-template-columns: 1fr;
+    }
   }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-  section {
+  .section-main {
     grid-template-columns: repeat(1, 1fr);
     padding: 15px;
   }
 
-  section > :nth-child(n + 3) {
-    grid-column: 1 / -1; /* span all columns */
+  .section-main > :nth-child(n + 3) {
+    grid-column: 1 / -1;
+  }
+
+  .section-secondary {
+    padding: 10px;
+    .cards {
+      grid-template-columns: 1fr;
+    }
   }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-  section {
+  .section-main {
     grid-template-columns: repeat(2, 1fr);
     padding: 20px;
   }
 
-  section > :nth-child(n + 3) {
-    grid-column: 1 / -1; /* span all columns */
+  .section-main > :nth-child(n + 3) {
+    grid-column: 1 / -1;
+  }
+
+  .section-secondary {
+    padding: 10px;
+    .cards {
+      grid-template-columns: 1fr;
+    }
   }
 }
 
 @media (min-width: 1025px) {
-  section {
+  .section-main {
     grid-template-columns: repeat(3, 1fr);
-    padding: 25px;
   }
 }
