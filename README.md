@@ -13,7 +13,7 @@ Angular application for Orchard
 1. Clone the repo:
    ```bash
    git clone https://github.com/sebasisaza/orchard-test.git
-   cd orchard-test/orchard
+   cd orchard-test/
    ```
 2. ```console
    npm install
