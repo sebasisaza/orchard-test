@@ -155,12 +155,31 @@ main {
   .section-main {
     grid-template-columns: 1fr;
     padding: 10px;
+
+    .third {
+      .div-title,
+      p {
+        text-align: center;
+      }
+
+      .div-footer {
+        align-items: center;
+
+        span {
+          text-align: center;
+        }
+      }
+    }
   }
 
   .section-secondary {
     padding: 10px;
     .cards {
       grid-template-columns: 1fr;
+    }
+
+    .section-title {
+      text-align: center;
     }
   }
 }
@@ -194,7 +213,7 @@ main {
   }
 
   .section-secondary {
-    padding: 10px;
+    padding: 20px;
     .cards {
       grid-template-columns: 1fr;
     }
